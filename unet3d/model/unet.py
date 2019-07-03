@@ -100,7 +100,6 @@ def create_convolution_block(input_layer, n_filters, batch_normalization=False, 
         layer = BatchNormalization(axis=1)(layer)
     elif instance_normalization:
         try:
-            # from keras_contrib.layers.normalization import InstanceNormalization
             from keras_contrib.layers.normalization.instancenormalization import InstanceNormalization
 
         except ImportError:
